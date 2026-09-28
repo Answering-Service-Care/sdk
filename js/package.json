@@ -1,0 +1,57 @@
+{
+  "name": "answeringservicecare",
+  "version": "1.0.0",
+  "description": "Official client and CLI for the Answering Service Care public API: company details, services, plan pricing, and site search. No API key needed.",
+  "keywords": [
+    "answering service care",
+    "answering service",
+    "virtual receptionist",
+    "ai receptionist",
+    "call center",
+    "pricing",
+    "api",
+    "sdk",
+    "cli"
+  ],
+  "homepage": "https://answeringservicecare.com/developers/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Answering-Service-Care/sdk.git",
+    "directory": "js"
+  },
+  "bugs": {
+    "url": "https://github.com/Answering-Service-Care/sdk/issues"
+  },
+  "license": "MIT",
+  "author": "Answering Service Care (https://answeringservicecare.com)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "answeringservicecare": "dist/bin.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

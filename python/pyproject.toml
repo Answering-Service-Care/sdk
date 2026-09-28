@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "answeringservicecare"
+version = "1.0.0"
+description = "Official client and CLI for the Answering Service Care public API: company details, services, plan pricing, and site search. No API key needed."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Answering Service Care", email = "sales@answeringservicecare.com" }]
+keywords = ["answering service care", "answering service", "virtual receptionist", "ai receptionist", "call center", "pricing", "api", "sdk", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Communications :: Telephony",
+    "Topic :: Software Development :: Libraries",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://answeringservicecare.com"
+Documentation = "https://answeringservicecare.com/developers/"
+"API reference" = "https://answeringservicecare.com/openapi.json"
+Source = "https://github.com/Answering-Service-Care/sdk"
+Issues = "https://github.com/Answering-Service-Care/sdk/issues"
+
+[project.scripts]
+answeringservicecare = "answeringservicecare.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/answeringservicecare"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
