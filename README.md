@@ -19,12 +19,14 @@ Base URL: `https://answeringservicecare.com/api/v1`. Full description: [openapi.
 |---|---|---|---|
 | JavaScript / TypeScript | [`answeringservicecare`](https://www.npmjs.com/package/answeringservicecare) | `npm install answeringservicecare` | [`js/`](js/) |
 | Python | [`answeringservicecare`](https://pypi.org/project/answeringservicecare/) | `pip install answeringservicecare` | [`python/`](python/) |
+| Go | [`github.com/Answering-Service-Care/sdk/go`](https://pkg.go.dev/github.com/Answering-Service-Care/sdk/go) | `go get github.com/Answering-Service-Care/sdk/go` | [`go/`](go/) |
 
-Both include an `answeringservicecare` command:
+All three include an `answeringservicecare` command:
 
 ```bash
 npx answeringservicecare pricing --service "answering service" --billing monthly
 pipx run answeringservicecare search "legal answering service" --limit 5
+go run github.com/Answering-Service-Care/sdk/go/cmd/answeringservicecare@latest company
 ```
 
 ## Other ways in
